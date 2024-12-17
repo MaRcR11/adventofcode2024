@@ -1,8 +1,8 @@
 import pandas as pd
 
-def calc_total_distance():
 
-    data = pd.read_csv('input.csv', header=None, sep=r'\s+')
+def calc_total_distance():
+    data = pd.read_csv("input.csv", header=None, sep=r"\s+")
 
     left = sorted(data[0])
     right = sorted(data[1])
@@ -11,6 +11,5 @@ def calc_total_distance():
 
     return total_distance
 
+
 print(calc_total_distance())
-
-

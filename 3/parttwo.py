@@ -1,5 +1,6 @@
 import re
 
+
 def sum_enabled_mul():
     with open("input.txt") as f:
         data = f.read()
@@ -16,5 +17,6 @@ def sum_enabled_mul():
                 total_sum += int(match.group(2)) * int(match.group(3))
 
         return total_sum
+
 
 print(sum_enabled_mul())

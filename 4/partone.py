@@ -3,9 +3,9 @@ def count_word_occurrences(grid, word):
 
     def is_valid(x, y, dx, dy):
         return all(
-            0 <= x + i * dx < len(grid) and
-            0 <= y + i * dy < len(grid[0]) and
-            grid[x + i * dx][y + i * dy] == word[i]
+            0 <= x + i * dx < len(grid)
+            and 0 <= y + i * dy < len(grid[0])
+            and grid[x + i * dx][y + i * dy] == word[i]
             for i in range(len(word))
         )
 
@@ -16,7 +16,8 @@ def count_word_occurrences(grid, word):
         for dx, dy in directions
     )
 
-with open("input.txt", 'r') as file:
+
+with open("input.txt", "r") as file:
     grid = [list(line.strip()) for line in file]
     print(grid)
 
